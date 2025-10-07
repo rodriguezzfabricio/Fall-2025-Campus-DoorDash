@@ -3,9 +3,10 @@ package restaurants
 
 import (
 	"context"
+	"log"
 
 	"github.com/google/uuid"
-	_"github.com/jackc/pgx/v5"
+	_ "github.com/jackc/pgx/v5"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
 
@@ -20,7 +21,7 @@ type FoodItem struct{
 	RestaurantID  *uuid.UUID `json:"restaurant_id" db:"restaurant_id"`
 	CategoryID *uuid.UUID `json:"category_id" db:"category_id"`
 	FoodName string `json:"food_name" db:"food_name"`
-	Price float64 `json:"price" db:"price"`
+	Price *float64 `json:"price" db:"price"`
 	Availability bool `json:"availability" db:"availability"`
 }
 
@@ -108,6 +109,11 @@ func (s * RestaurantService) GetRestaurantMenu (ctx context.Context, restaurantI
 		foodItems= append(foodItems, item) 
 	}
 
+	if err := rows.Err(); err != nil{
+		return nil, err
+	}
+
+	log.Print("problem with function not true")
 	return foodItems, nil
 }
 
