@@ -1,4 +1,8 @@
 {
+  "name": "campus-doordash",
+  "version": "1.0.0",
+  "description": "On-campus food delivery platform for the UMBC community.",
+  "author": "Fabricio Rodriguez <frodrig3@umbc.edu>",
   "dependencies": {
     "@react-native-async-storage/async-storage": "^2.2.0",
     "@react-native-picker/picker": "^2.11.2",

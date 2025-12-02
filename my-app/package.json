@@ -1,7 +1,9 @@
 {
-  "name": "my-app",
-  "main": "expo-router/entry",
+  "name": "campus-doordash-mobile-prototype",
   "version": "1.0.0",
+  "description": "On-campus food delivery platform for the UMBC community.",
+  "author": "Fabricio Rodriguez <frodrig3@umbc.edu>",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
